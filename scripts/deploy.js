@@ -1,9 +1,11 @@
-const fs = require('fs');
-const { ethers } = require('hardhat');
+const fs = require("fs");
+const { ethers } = require("hardhat");
 async function main() {
   const [deployer, user1] = await ethers.getSigners();
   // We get the contract factory to deploy
-  const DecentratwitterFactory = await ethers.getContractFactory("Decentratwitter");
+  const DecentratwitterFactory = await ethers.getContractFactory(
+    "Decentratwitter"
+  );
   // Deploy contract
   const decentratwitter = await DecentratwitterFactory.deploy();
   // Save contract address file in project
