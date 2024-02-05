@@ -128,8 +128,6 @@ const Home = ({ contract }) => {
         setCurrImage(event.target.files[0]);
         console.log(event.target.files[0]);
         setLoading(false);
-        // const result = await client.add(file);
-        // setAvatar(`https://ipfs.infura.io/ipfs/${result.path}`);
       } catch (error) {
         window.alert("ipfs image upload error: ", error);
         setLoading(false);
